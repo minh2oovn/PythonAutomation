@@ -1,0 +1,393 @@
+2021-12-30 17:57:19,950 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-30 17:57:29,954 : INFO : asweb  : Successfully access to PROV
+2021-12-30 17:57:30,203 : INFO : asweb  : Successfully login to PROV
+2021-12-30 17:57:30,554 : INFO : asweb  : Successfully confirm to PROV
+2021-12-30 17:57:33,570 : INFO : asweb  : Adding User
+2021-12-30 17:57:33,570 : INFO : asweb  : Move to Add tab
+2021-12-30 17:57:34,330 : INFO : asweb  : Select domain to User
+2021-12-30 17:57:34,658 : INFO : asweb  : Select Type to User
+2021-12-30 17:57:35,552 : INFO : asweb  : Select service style to User
+2021-12-30 17:57:36,420 : INFO : asweb  : Select timezone to User
+2021-12-30 17:57:36,749 : INFO : asweb  : save user data to Web
+2021-12-30 17:57:37,878 : INFO : asweb  : Verify alarm on page after save page:User Added Successfully
+2021-12-30 17:57:37,880 : INFO : asweb  : Close all Browsers
+2021-12-30 17:57:37,881 : INFO : basicfunc  : Close browsers after testing
+2021-12-30 17:57:38,646 : INFO : asweb  : Accessing PA Web with chrome
+2021-12-30 17:57:55,080 : INFO : asweb  : Successfully access to PA
+2021-12-30 17:57:55,381 : INFO : asweb  : Get alarm on page after login PA page:
+2021-12-30 17:57:58,697 : INFO : asweb  : Move to User tab
+2021-12-30 17:57:58,942 : INFO : asweb  : Verify your user data from AS5300 server
+2021-12-30 17:57:59,137 : INFO : asweb  : Close all Browsers
+2021-12-30 17:57:59,137 : INFO : basicfunc  : Close browsers after testing
+2021-12-30 17:57:59,930 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-30 17:58:10,110 : INFO : asweb  : Successfully access to PROV
+2021-12-30 17:58:10,365 : INFO : asweb  : Successfully login to PROV
+2021-12-30 17:58:10,702 : INFO : asweb  : Successfully confirm to PROV
+2021-12-30 17:58:13,725 : INFO : asweb  : Searching User
+2021-12-30 17:58:13,726 : INFO : asweb  : Check PROV search 1 if Admin search username with number only
+2021-12-30 17:58:14,285 : INFO : asweb  : Verify alarm 1 on page after search number to page:User name is invalid. Must be of form user@domain
+2021-12-30 17:58:17,300 : INFO : asweb  : Check PROV search 2 if Admin search username with domain only
+2021-12-30 17:58:17,763 : INFO : asweb  : Verify alarm 2 on page after search domain to page:Invalid User Name @dsn.mil .Please provide the fully qualified User Name i.e. user@domain .
+2021-12-30 17:58:20,771 : INFO : asweb  : Check PROV search 3 if Admin search username with symbol only
+2021-12-30 17:58:21,342 : INFO : asweb  : Verify alarm 3 on page after search symbol to page:Invalid Domain. Domain #$%^&*()_+ not found.
+2021-12-30 17:58:24,350 : INFO : asweb  : Check PROV search 4 if Admin search username both name and domain
+2021-12-30 17:58:25,429 : INFO : asweb  : Verify alarm 4 on page after search name and domain to page:Home
+User Details for: 25999@dsn.mil
+Base data
+Password
+Password policy
+Services
+Extended data
+Actions
+Links
+Type Standalone
+First name  
+Last name  
+E-mail
+Business phone
+Home phone
+Cell phone
+Pager
+Fax
+Status reason  
+ACTIVE
+ INACTIVE
+Time zone  
+Alaska Standard Time
+ Central European Standard Time
+ Central Standard Time
+ China Standard Time
+ Eastern Standard Time
+ GMT+02:00
+ GMT+03:00
+ GMT+03:30
+ GMT+04:00
+ GMT+05:00
+ GMT+05:30
+ GMT+06:00
+ GMT+07:00
+ GMT+09:30
+ GMT+10:00
+ GMT+11:00
+ GMT+12:00
+ GMT-03:00
+ GMT-04:00
+ GMT-11:00
+ Greenwich Mean Time
+ Hawaii Standard Time
+ Japan Standard Time
+ Mountain Standard Time
+ Newfoundland Standard Time
+ Pacific Standard Time
+ Saskatchewan
+Locale  
+English
+ French
+ Japanese
+ Simplified Chinese
+ Traditional Chinese
+ German
+ Spanish
+ Korean
+ Portuguese
+ Russian
+Location  
+Other
+Common Names
+2021-12-30 17:58:28,440 : INFO : asweb  : Check PROV search 5 if Admin search blank field
+2021-12-30 17:58:28,887 : INFO : asweb  : Verify alarm 5 on page after search blank field to page:User name is invalid. Must be of form user@domain
+2021-12-30 17:58:28,888 : INFO : asweb  : Close all Browsers
+2021-12-30 17:58:28,888 : INFO : basicfunc  : Close browsers after testing
+2021-12-30 17:58:29,644 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-30 17:58:40,314 : INFO : asweb  : Successfully access to PROV
+2021-12-30 17:58:40,551 : INFO : asweb  : Successfully login to PROV
+2021-12-30 17:58:40,966 : INFO : asweb  : Successfully confirm to PROV
+2021-12-30 17:58:43,988 : INFO : asweb  : deleting User
+2021-12-30 17:58:43,988 : INFO : asweb  : Verify this user and move to User
+2021-12-30 17:58:45,037 : INFO : asweb  : Verify alarm on page after search domain to page:Home
+User Details for: 25999@dsn.mil
+Base data
+Password
+Password policy
+Services
+Extended data
+Actions
+Links
+Type Standalone
+First name  
+Last name  
+E-mail
+Business phone
+Home phone
+Cell phone
+Pager
+Fax
+Status reason  
+ACTIVE
+ INACTIVE
+Time zone  
+Alaska Standard Time
+ Central European Standard Time
+ Central Standard Time
+ China Standard Time
+ Eastern Standard Time
+ GMT+02:00
+ GMT+03:00
+ GMT+03:30
+ GMT+04:00
+ GMT+05:00
+ GMT+05:30
+ GMT+06:00
+ GMT+07:00
+ GMT+09:30
+ GMT+10:00
+ GMT+11:00
+ GMT+12:00
+ GMT-03:00
+ GMT-04:00
+ GMT-11:00
+ Greenwich Mean Time
+ Hawaii Standard Time
+ Japan Standard Time
+ Mountain Standard Time
+ Newfoundland Standard Time
+ Pacific Standard Time
+ Saskatchewan
+Locale  
+English
+ French
+ Japanese
+ Simplified Chinese
+ Traditional Chinese
+ German
+ Spanish
+ Korean
+ Portuguese
+ Russian
+Location  
+Other
+Common Names
+2021-12-30 17:58:45,047 : INFO : asweb  : Delete this user
+2021-12-30 17:58:45,397 : INFO : asweb  : Verify delete user successfully
+2021-12-30 17:58:45,862 : INFO : asweb  : Verify alarm on page after search domain to page:User deleted Successfully
+2021-12-30 17:58:45,865 : INFO : asweb  : Close all Browsers
+2021-12-30 17:58:45,865 : INFO : basicfunc  : Close browsers after testing
+2021-12-31 10:49:01,111 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-31 10:49:10,859 : INFO : asweb  : Successfully access to PROV
+2021-12-31 10:49:11,282 : ERROR : asweb  : Login AS53 PROV failure Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'Username:')]//following-sibling::*"}
+  (Session info: chrome=96.0.4664.110)
+
+2021-12-31 10:49:11,333 : INFO : asweb  : Collect logs and take screenshot
+2021-12-31 10:49:11,333 : INFO : basicfunc  : Taking screenshot...
+2021-12-31 10:49:11,334 : INFO : basicfunc  : screenshot_name: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-11.334141.png
+2021-12-31 10:49:12,025 : INFO : basicfunc  : Take screenshot successfully with path: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-11.334141.png
+2021-12-31 10:49:12,026 : INFO : basicfunc  : <C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-11.334141.png>
+2021-12-31 10:49:12,562 : INFO : asweb  : Accessing PA Web with chrome
+2021-12-31 10:49:29,350 : INFO : asweb  : Successfully access to PA
+2021-12-31 10:49:29,648 : INFO : asweb  : Get alarm on page after login PA page:Login Failed!
+2021-12-31 10:49:29,686 : ERROR : asweb  : Login PA failure Message: element not interactable
+  (Session info: chrome=96.0.4664.110)
+
+2021-12-31 10:49:29,701 : INFO : asweb  : Collect logs and take screenshot
+2021-12-31 10:49:29,702 : INFO : basicfunc  : Taking screenshot...
+2021-12-31 10:49:29,702 : INFO : basicfunc  : screenshot_name: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-29.702179.png
+2021-12-31 10:49:29,846 : INFO : basicfunc  : Take screenshot successfully with path: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-29.702179.png
+2021-12-31 10:49:29,847 : INFO : basicfunc  : <C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-29.702179.png>
+2021-12-31 10:49:30,108 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-31 10:49:39,554 : INFO : asweb  : Successfully access to PROV
+2021-12-31 10:49:40,040 : INFO : asweb  : Successfully login to PROV
+2021-12-31 10:49:40,691 : INFO : asweb  : Successfully confirm to PROV
+2021-12-31 10:49:43,714 : INFO : asweb  : Searching User
+2021-12-31 10:49:43,714 : INFO : asweb  : Check PROV search 1 if Admin search username with number only
+2021-12-31 10:49:44,304 : INFO : asweb  : Verify alarm 1 on page after search number to page:User name is invalid. Must be of form user@domain
+2021-12-31 10:49:47,312 : INFO : asweb  : Check PROV search 2 if Admin search username with domain only
+2021-12-31 10:49:47,786 : INFO : asweb  : Verify alarm 2 on page after search domain to page:Invalid User Name @dsn.mil .Please provide the fully qualified User Name i.e. user@domain .
+2021-12-31 10:49:50,787 : INFO : asweb  : Check PROV search 3 if Admin search username with symbol only
+2021-12-31 10:49:51,343 : INFO : asweb  : Verify alarm 3 on page after search symbol to page:Invalid Domain. Domain #$%^&*()_+ not found.
+2021-12-31 10:49:54,347 : INFO : asweb  : Check PROV search 4 if Admin search username both name and domain
+2021-12-31 10:49:54,819 : ERROR : asweb  : Verify to search user on PROV failure Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='portlet-content-center']/div[@id='js_MainMenuPortlet__dp_2__UserPortlet_' and contains(text(),'User Details for: 25999@dsn.mil')]"}
+  (Session info: chrome=96.0.4664.110)
+
+2021-12-31 10:49:54,830 : INFO : asweb  : Collect logs and take screenshot
+2021-12-31 10:49:54,831 : INFO : basicfunc  : Taking screenshot...
+2021-12-31 10:49:54,831 : INFO : basicfunc  : screenshot_name: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-54.831042.png
+2021-12-31 10:49:54,965 : INFO : basicfunc  : Take screenshot successfully with path: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-54.831042.png
+2021-12-31 10:49:54,965 : INFO : basicfunc  : <C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-49-54.831042.png>
+2021-12-31 10:49:55,175 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-31 10:50:04,209 : INFO : asweb  : Successfully access to PROV
+2021-12-31 10:50:04,899 : INFO : asweb  : Successfully login to PROV
+2021-12-31 10:50:05,231 : INFO : asweb  : Successfully confirm to PROV
+2021-12-31 10:50:08,247 : INFO : asweb  : deleting User
+2021-12-31 10:50:08,247 : INFO : asweb  : Verify this user and move to User
+2021-12-31 10:50:08,757 : ERROR : asweb  : Verify to search user on PROV failure Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='portlet-content-center']/div[@id='js_MainMenuPortlet__dp_2__UserPortlet_' and contains(text(),'User Details for: 25999@dsn.mil')]"}
+  (Session info: chrome=96.0.4664.110)
+
+2021-12-31 10:50:08,768 : INFO : asweb  : Collect logs and take screenshot
+2021-12-31 10:50:08,768 : INFO : basicfunc  : Taking screenshot...
+2021-12-31 10:50:08,769 : INFO : basicfunc  : screenshot_name: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-50-08.769701.png
+2021-12-31 10:50:08,925 : INFO : basicfunc  : Take screenshot successfully with path: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-50-08.769701.png
+2021-12-31 10:50:08,926 : INFO : basicfunc  : <C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-50-08.769701.png>
+2021-12-31 10:52:43,242 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-31 10:52:54,474 : INFO : asweb  : Successfully access to PROV
+2021-12-31 10:52:55,048 : INFO : asweb  : Successfully login to PROV
+2021-12-31 10:52:55,395 : INFO : asweb  : Successfully confirm to PROV
+2021-12-31 10:52:58,411 : INFO : asweb  : Adding User
+2021-12-31 10:52:58,411 : INFO : asweb  : Move to Add tab
+2021-12-31 10:52:59,144 : INFO : asweb  : Select domain to User
+2021-12-31 10:52:59,502 : INFO : asweb  : Select Type to User
+2021-12-31 10:53:00,590 : INFO : asweb  : Select service style to User
+2021-12-31 10:53:01,469 : INFO : asweb  : Select timezone to User
+2021-12-31 10:53:01,818 : INFO : asweb  : save user data to Web
+2021-12-31 10:53:02,907 : INFO : asweb  : Verify alarm on page after save page:User Added Successfully
+2021-12-31 10:53:02,907 : INFO : asweb  : Close all Browsers
+2021-12-31 10:53:02,907 : INFO : basicfunc  : Close browsers after testing
+2021-12-31 10:53:03,697 : INFO : asweb  : Accessing PA Web with chrome
+2021-12-31 10:53:19,765 : INFO : asweb  : Successfully access to PA
+2021-12-31 10:53:20,068 : INFO : asweb  : Get alarm on page after login PA page:
+2021-12-31 10:53:23,423 : INFO : asweb  : Move to User tab
+2021-12-31 10:53:23,663 : INFO : asweb  : Verify your user data from AS5300 server
+2021-12-31 10:53:23,848 : INFO : asweb  : Close all Browsers
+2021-12-31 10:53:23,849 : INFO : basicfunc  : Close browsers after testing
+2021-12-31 10:53:24,655 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-31 10:53:34,384 : INFO : asweb  : Successfully access to PROV
+2021-12-31 10:53:34,705 : INFO : asweb  : Successfully login to PROV
+2021-12-31 10:53:35,055 : INFO : asweb  : Successfully confirm to PROV
+2021-12-31 10:53:38,065 : INFO : asweb  : Searching User
+2021-12-31 10:53:38,065 : INFO : asweb  : Check PROV search 1 if Admin search username with number only
+2021-12-31 10:53:38,559 : INFO : asweb  : Verify alarm 1 on page after search number to page:User name is invalid. Must be of form user@domain
+2021-12-31 10:53:41,569 : INFO : asweb  : Check PROV search 2 if Admin search username with domain only
+2021-12-31 10:53:42,059 : INFO : asweb  : Verify alarm 2 on page after search domain to page:Invalid User Name @dsn.mil .Please provide the fully qualified User Name i.e. user@domain .
+2021-12-31 10:53:45,060 : INFO : asweb  : Check PROV search 3 if Admin search username with symbol only
+2021-12-31 10:53:45,538 : INFO : asweb  : Verify alarm 3 on page after search symbol to page:Invalid Domain. Domain #$%^&*()_+ not found.
+2021-12-31 10:53:48,547 : INFO : asweb  : Check PROV search 4 if Admin search username both name and domain
+2021-12-31 10:53:49,651 : INFO : asweb  : Verify alarm 4 on page after search name and domain to page:Home
+User Details for: 25999@dsn.mil
+Base data
+Password
+Password policy
+Services
+Extended data
+Actions
+Links
+Type Standalone
+First name  
+Last name  
+E-mail
+Business phone
+Home phone
+Cell phone
+Pager
+Fax
+Status reason  
+ACTIVE
+ INACTIVE
+Time zone  
+Alaska Standard Time
+ Central European Standard Time
+ Central Standard Time
+ China Standard Time
+ Eastern Standard Time
+ GMT+02:00
+ GMT+03:00
+ GMT+03:30
+ GMT+04:00
+ GMT+05:00
+ GMT+05:30
+ GMT+06:00
+ GMT+07:00
+ GMT+09:30
+ GMT+10:00
+ GMT+11:00
+ GMT+12:00
+ GMT-03:00
+ GMT-04:00
+ GMT-11:00
+ Greenwich Mean Time
+ Hawaii Standard Time
+ Japan Standard Time
+ Mountain Standard Time
+ Newfoundland Standard Time
+ Pacific Standard Time
+ Saskatchewan
+Locale  
+English
+ French
+ Japanese
+ Simplified Chinese
+ Traditional Chinese
+ German
+ Spanish
+ Korean
+ Portuguese
+ Russian
+Location  
+Other
+Common Names
+2021-12-31 10:53:52,652 : INFO : asweb  : Check PROV search 5 if Admin search blank field
+2021-12-31 10:53:53,173 : INFO : asweb  : Verify alarm 5 on page after search blank field to page:User name is invalid. Must be of form user@domain
+2021-12-31 10:53:53,174 : INFO : asweb  : Close all Browsers
+2021-12-31 10:53:53,174 : INFO : basicfunc  : Close browsers after testing
+2021-12-31 10:53:53,979 : INFO : asweb  : Accessing PROV Web with chrome
+2021-12-31 10:54:04,464 : INFO : asweb  : Successfully access to PROV
+2021-12-31 10:54:04,541 : ERROR : asweb  : Login AS53 PROV failure Message: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'Username:')]//following-sibling::*"}
+  (Session info: chrome=96.0.4664.110)
+
+2021-12-31 10:54:04,552 : INFO : asweb  : Collect logs and take screenshot
+2021-12-31 10:54:04,552 : INFO : basicfunc  : Taking screenshot...
+2021-12-31 10:54:04,552 : INFO : basicfunc  : screenshot_name: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-54-04.552124.png
+2021-12-31 10:54:04,811 : INFO : basicfunc  : Take screenshot successfully with path: C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-54-04.552124.png
+2021-12-31 10:54:04,812 : INFO : basicfunc  : <C:\Users\UC\PycharmProjects\openweb\AS53pylib\Collectlogs\Screenshot-2021-12-31-10-54-04.552124.png>
+<<<<<<< HEAD
+2022-01-10 09:14:15,464 : INFO : asapp  : User not change
+2022-01-10 09:14:15,465 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 09:15:07,256 : INFO : asapp  : Login successful
+2022-01-10 09:15:43,592 : INFO : asapp  : Change to username:88104 and network:10.255.251.183
+2022-01-10 09:16:24,297 : INFO : asapp  : Login successful
+2022-01-10 09:17:00,708 : INFO : asapp  : Message sent successfully
+2022-01-10 09:23:00,560 : INFO : asapp  : User not change
+2022-01-10 09:23:00,560 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 09:23:39,065 : INFO : asapp  : Login successful
+2022-01-10 09:24:09,967 : INFO : asapp  : User not change
+2022-01-10 09:24:09,968 : INFO : asapp  : Change to username:88104 and network:10.255.251.183
+2022-01-10 09:24:43,571 : INFO : asapp  : Login successful
+2022-01-10 09:25:19,840 : INFO : asapp  : Message sent successfully
+2022-01-10 09:27:17,152 : INFO : asapp  : User not change
+2022-01-10 09:27:17,152 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 09:28:01,483 : INFO : asapp  : Login successful
+2022-01-10 09:28:32,607 : INFO : asapp  : Change to username:88108 and network:10.255.251.183
+2022-01-10 09:29:12,851 : INFO : asapp  : Login successful
+2022-01-10 09:29:46,532 : INFO : asapp  : Calling to 88108
+2022-01-10 09:29:57,655 : INFO : asapp  : Call is established between 2 users
+2022-01-10 09:30:14,001 : INFO : asapp  : Call on hold
+2022-01-10 09:30:27,917 : INFO : asapp  : Cancel on hold
+2022-01-10 09:30:50,358 : INFO : asapp  : Call ended
+2022-01-10 09:32:19,857 : INFO : asapp  : User not change
+2022-01-10 09:32:19,857 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 09:33:04,089 : INFO : asapp  : Login successful
+2022-01-10 09:33:56,125 : INFO : asapp  : Search successfully!!!
+=======
+>>>>>>> ebc75e2a8f52a52d9a7d3f7376dee53114291102
+2022-01-10 10:05:28,801 : INFO : asapp  : User not change
+2022-01-10 10:05:28,801 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 10:06:07,378 : INFO : asapp  : Login successful
+2022-01-10 10:06:41,249 : INFO : asapp  : Change to username:88104 and network:10.255.251.183
+2022-01-10 10:07:21,455 : INFO : asapp  : Login successful
+2022-01-10 10:07:57,411 : INFO : asapp  : Message sent successfully
+2022-01-10 10:09:56,180 : INFO : asapp  : User not change
+2022-01-10 10:09:56,180 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 10:10:40,269 : INFO : asapp  : Login successful
+2022-01-10 10:11:13,031 : INFO : asapp  : Change to username:88108 and network:10.255.251.183
+2022-01-10 10:11:58,427 : INFO : asapp  : Login successful
+2022-01-10 10:12:32,320 : INFO : asapp  : Calling to 88108
+2022-01-10 10:12:43,593 : INFO : asapp  : Call is established between 2 users
+2022-01-10 10:12:59,947 : INFO : asapp  : Call on hold
+2022-01-10 10:13:13,762 : INFO : asapp  : Cancel on hold
+2022-01-10 10:13:36,207 : INFO : asapp  : Call ended
+2022-01-10 10:15:05,514 : INFO : asapp  : User not change
+2022-01-10 10:15:05,514 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 10:15:43,786 : INFO : asapp  : Login successful
+2022-01-10 10:16:35,910 : INFO : asapp  : Search successfully!!!
+2022-01-10 10:19:49,851 : INFO : asapp  : User not change
+2022-01-10 10:19:49,851 : INFO : asapp  : Change to username:88109 and network:10.255.251.183
+2022-01-10 10:20:33,824 : INFO : asapp  : Login successful
+2022-01-10 10:21:25,725 : INFO : asapp  : Search successfully!!!

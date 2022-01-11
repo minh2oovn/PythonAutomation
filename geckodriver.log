@@ -1,0 +1,150 @@
+1635328707869	geckodriver	INFO	Listening on 127.0.0.1:51016
+1635328711023	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51017" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileLZ8CAR"
+1635328735578	geckodriver	INFO	Listening on 127.0.0.1:51103
+1635328738629	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51104" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileG7wRfG"
+1635328738917	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileG7wRfG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51104/devtools/browser/a0eb3211-3906-451c-a9de-69af2d82367c
+1635328743415	Marionette	INFO	Listening on port 51109
+1635328743570	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635328817453	Marionette	INFO	Stopped listening on port 51109
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch dat1635328817749	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofile1GUVBl\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51163/devtools/browser/0da94d4e-89c7-459c-b262-049384db77fa
+1635328821059	Marionette	INFO	Listening on port 51168
+1635328821479	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+1635328854932	Marionette	INFO	Stopped listening on port 51168
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1635328857569	geckodriver	INFO	Listening on 127.0.0.1:51231
+1635328860642	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51232" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileqkwHeY"
+1635328860912	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileqkwHeY\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51232/devtools/browser/f6363a2b-35b8-4111-b39d-444bcd4ff25d
+1635328863863	Marionette	INFO	Listening on port 51237
+1635328864327	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/actors/AutoCompleteChild.jsm, line 125: Error: Invalid autocomplete selectedIndex
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 194: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]'[JavaScript Error: "Invalid autocomplete selectedIndex" {file: "resource://gre/actors/AutoCompleteChild.jsm" line: 125}]' when calling method: [nsIAutoCompletePopup::selectedIndex]
+JavaScript warning: https://47.11.1.5:8443/portal/portal/_ns:Z01haW5NZW51UG9ydGxldF9fTWFpbk1lbnVQb3J0bGV0fGMwfGQxfGVyZlJlcz0xPS9vcmcvYWpheDRqc2YvZnJhbWV3b3JrLnBhY2suanM_/prov, line 5514: unreachable code after return statement
+JavaScript warning: https://47.11.1.5:8443/portal/portal/_ns:Z01haW5NZW51UG9ydGxldF9fTWFpbk1lbnVQb3J0bGV0fGMwfGQxfGVyZlJlcz0xPS9vcmcvcmljaGZhY2VzL3VpLnBhY2suanM_/prov, line 12786: unreachable code after return statement
+1635328889167	Marionette	INFO	Stopped listening on port 51237
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 8908, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1635328986068	geckodriver	INFO	Listening on 127.0.0.1:51308
+1635328989144	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51309" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileoM6GB4"
+1635328989440	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileoM6GB4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51309/devtools/browser/2b04b928-4356-473a-8c4c-46fbb52255f4
+1635328992399	Marionette	INFO	Listening on port 51314
+1635328992835	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635329003670	Marionette	INFO	Stopped listening on port 51314
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 9444, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1635329663166	geckodriver	INFO	Listening on 127.0.0.1:59531
+1635329666266	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59532" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileR46UaG"
+1635329666551	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileR46UaG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59532/devtools/browser/11b6efd9-3658-4e02-8fc6-692dafc79d13
+1635329669409	Marionette	INFO	Listening on port 59537
+1635329669803	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR osclientcerts_static] ThreadId(6) C_DestroyObject: CKR_FUNCTION_NOT_SUPPORTED
+[ERROR osclientcerts_static] ThreadId(6) C_DestroyObject: CKR_FUNCTION_NOT_SUPPORTED
+1635329772102	Marionette	INFO	Stopped listening on port 59537
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 11568, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1635329774647	geckodriver	INFO	Listening on 127.0.0.1:59604
+1635329777732	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59605" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileXCYsku"
+1635329778016	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileXCYsku\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59605/devtools/browser/988802e5-a6c0-4297-96db-0e85e0a83895
+1635329781194	Marionette	INFO	Listening on port 59610
+1635329781621	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635329786936	Marionette	INFO	Stopped listening on port 59610
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 5228, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1635329902147	geckodriver	INFO	Listening on 127.0.0.1:59677
+1635329905216	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59678" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileDyZ36p"
+1635329905516	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileDyZ36p\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59678/devtools/browser/b7ae481a-be0e-4101-8842-d45d9bcf62ee
+1635329908438	Marionette	INFO	Listening on port 59683
+1635329908891	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635329920248	Marionette	INFO	Stopped listening on port 59683
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 5988, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1635329950563	geckodriver	INFO	Listening on 127.0.0.1:59751
+1635329953657	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59752" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofile6xyQ4W"
+1635329953925	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofile6xyQ4W\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59752/devtools/browser/ff80d6cf-7168-40ba-a505-b5ef615d4ad6
+1635329956945	Marionette	INFO	Listening on port 59757
+1635329957345	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1635329957601	Marionette	INFO	Stopped listening on port 59757
+JavaScript error: resource://activity-stream/lib/ActivityStreamPrefs.jsm, line 27: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIPrefBranch.removeObserver]
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+[Parent 13284, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+JavaScript error: resource://gre/modules/ExtensionSettingsStore.jsm, line 122: Error: The ExtensionSettingsStore was accessed before the initialize promise resolved.
+JavaScript error: resource://gre/modules/JSONFile.jsm, line 186: Error: Data is not ready.
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine amazondotcom@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine wikipedia@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine bing@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.error: "Could not load engine ddg@search.mozilla.org: [Exception... \"AddonManager is not initialized\"  nsresult: \"0xc1f30001 (NS_ERROR_NOT_INITIALIZED)\"  location: \"JS frame :: resource://gre/modules/AddonManager.jsm :: installBuiltinAddon :: line 2526\"  data: no]"
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 718: Error: Phase "profile-before-change" is finished, it is too late to register completion condition "DoHController: clear state and remove observers"
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 829: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
+1635330967309	geckodriver	INFO	Listening on 127.0.0.1:59792
+1635330970379	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59793" "-no-remote" "-profile" "C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileRRcPfA"
+1635330970738	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\UC\\AppData\\Local\\Temp\\rust_mozprofileRRcPfA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59793/devtools/browser/7bcba862-20ca-44e4-be15-15d18565b429
+1635330975386	Marionette	INFO	Listening on port 59798
+1635330975912	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+1635389509222	Marionette	INFO	Stopped listening on port 59798
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+ listening on ws://localhost:60081/devtools/browser/c3874e8c-d7ed-4d03-99e5-c2d517db9e1d
+1635331463626	Marionette	INFO	Listening on port 60086
+1635331464059	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.log: WebExtensions: reset-default-search: starting.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+JavaScript error: , line 0: NS_ERROR_NOT_AVAILABLE
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.google.com"
+1635389508320	Marionette	INFO	Stopped listening on port 60086
+JavaScript error: resource:///modules/Interactions.jsm, line 201: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIUserIdleService.removeIdleObserver]
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+[Parent 4280, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

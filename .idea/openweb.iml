@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/AS53pylib/lib" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+<<<<<<< HEAD
+    <orderEntry type="jdk" jdkName="Python 3.9 (CustomLibrary)" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
+>>>>>>> ebc75e2a8f52a52d9a7d3f7376dee53114291102
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PackageRequirementsSettings">
+    <option name="requirementsPath" value="C:\Users\UC\AppData\Local\Programs\Python\Python310\Lib\unittest\test\" />
+  </component>
+</module>

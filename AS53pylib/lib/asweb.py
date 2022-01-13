@@ -118,6 +118,107 @@ class asweb(unittest.TestCase):
             logger.error(('Verify user PA information  failure %s') % (error))
             raise
 
+    @keyword("Verify user password on PA")
+    def userpassword(self, pauser:str, oldpass:str, newpass:str):
+        logger.info("Move to password tab")
+        try:
+            self.driver.find_element_by_xpath("//span[contains(text(),'Personal')]").click()
+            self.driver.find_element_by_xpath("//a[@class='button-link-menu' and contains(text(),'Password')]").click()
+            logger.info("Change your user password to AS5300 server with null")
+            self.driver.find_element_by_xpath("//div[@class='buttonArea']/button[@class='button']/span[contains(text(),'Apply')]").click()
+            time.sleep(3)
+            alarm = self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[2]/mat-dialog-content").text
+            logger.info("Verify alarm 1 on page after null password:" + alarm)
+            self.assertTrue('Password cannot be null.' in alarm, "Failed PA should NOT agree to change password with null")
+            self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[3]/button[@class='button']/span[contains(text(),'OK')]").click()
+
+            logger.info("Change your user password to AS5300 server without old password")
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(newpass)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(newpass)
+            self.driver.find_element_by_xpath("//div[@class='buttonArea']/button[@class='button']/span[contains(text(),'Apply')]").click()
+            time.sleep(3)
+            alarm = self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[2]/mat-dialog-content").text
+            logger.info("Verify alarm 2 on page without old password:" + alarm)
+            self.assertTrue('Password cannot be null.' in alarm, "Failed PA should NOT agree to change password without old password")
+            self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[3]/button[@class='button']/span[contains(text(),'OK')]").click()
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(Keys.CONTROL, 'a')
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(Keys.BACKSPACE)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(Keys.CONTROL, 'a')
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(Keys.BACKSPACE)
+
+            logger.info("Change your user password to AS5300 server without new password")
+            self.driver.find_element_by_xpath("//input[@formcontrolname='oldPassword' and @type='password']").send_keys(oldpass)
+            self.driver.find_element_by_xpath("//div[@class='buttonArea']/button[@class='button']/span[contains(text(),'Apply')]").click()
+            time.sleep(3)
+            alarm = self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[2]/mat-dialog-content").text
+            logger.info("Verify alarm 3 on page without new password:" + alarm)
+            self.assertTrue('Password cannot be null.' in alarm,"Failed PA should NOT agree to change password without new password")
+            self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[3]/button[@class='button']/span[contains(text(),'OK')]").click()
+
+            logger.info("Change your user password to AS5300 server with PW not match")
+            self.driver.find_element_by_xpath("//input[@formcontrolname='oldPassword' and @type='password']").send_keys(oldpass)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys("13579")
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys("24680")
+            self.driver.find_element_by_xpath("//div[@class='buttonArea']/button[@class='button']/span[contains(text(),'Apply')]").click()
+            time.sleep(3)
+            alarm = self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[2]/mat-dialog-content").text
+            logger.info("Verify alarm 4 on page with PW not match:" + alarm)
+            self.assertTrue('New passwords do not match' in alarm,"Failed PA should NOT agree to change password with PW not match")
+            self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[3]/button[@class='button']/span[contains(text(),'OK')]").click()
+            self.driver.find_element_by_xpath("//input[@formcontrolname='oldPassword' and @type='password']").send_keys(Keys.CONTROL, 'a')
+            self.driver.find_element_by_xpath("//input[@formcontrolname='oldPassword' and @type='password']").send_keys(Keys.BACKSPACE)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(Keys.CONTROL, 'a')
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(Keys.BACKSPACE)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(Keys.CONTROL, 'a')
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(Keys.BACKSPACE)
+
+            logger.info("Change your user password to AS5300 server ")
+            self.driver.find_element_by_xpath("//input[@formcontrolname='oldPassword' and @type='password']").send_keys(oldpass)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(newpass)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(newpass)
+            self.driver.find_element_by_xpath("//div[@class='buttonArea']/button[@class='button']/span[contains(text(),'Apply')]").click()
+            time.sleep(3)
+            alarm = self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[2]/mat-dialog-content").text
+            logger.info("Verify alarm 5 on page:" + alarm)
+            self.assertTrue('Password updated successfully' in alarm,"Failed PA should NOT agree to change password ")
+            self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[3]/button[@class='button']/span[contains(text(),'OK')]").click()
+            logger.info("Log out and check new password on PA")
+            self.driver.find_element_by_xpath("//div[@class='menu']/p[@class='menuText']/a[contains(text(),'Logout')]").click()
+            self.driver.find_element_by_xpath("//div[contains(text(),'Username:')]//following-sibling::*").send_keys( pauser+ "@dsn.mil")
+            self.driver.find_element_by_xpath("//div[contains(text(),'Password:')]//following-sibling::*").send_keys(newpass)
+            self.driver.find_element_by_xpath("//input[@type='submit' and @name='login']").click()
+            alarm = self.driver.find_element_by_xpath("*//div[@class='login-content']/div[@class='error-message']").text
+            logger.info("Get alarm on page after login PA page:" + alarm)
+            self.assertTrue("" in alarm, "Verify login PA failure: " + alarm)
+            self.driver.find_element_by_xpath("//input[@type='button' and @name='loginConfirm']").click()
+
+            logger.info("Finish test and repair Setup")
+            time.sleep(3)
+            self.driver.find_element_by_xpath("//span[contains(text(),'Personal')]").click()
+            self.driver.find_element_by_xpath("//a[@class='button-link-menu' and contains(text(),'Password')]").click()
+            time.sleep(3)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='oldPassword' and @type='password']").send_keys(newpass)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='newPassword' and @type='password']").send_keys(oldpass)
+            self.driver.find_element_by_xpath("//input[@formcontrolname='confirmNewPassword' and @type='password']").send_keys(oldpass)
+            self.driver.find_element_by_xpath("//div[@class='buttonArea']/button[@class='button']/span[contains(text(),'Apply')]").click()
+            time.sleep(3)
+            alarm = self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[2]/mat-dialog-content").text
+            logger.info("Verify alarm 6 on page:" + alarm)
+            self.assertTrue('Password updated successfully' in alarm, "Failed PA should NOT agree to change password ")
+            self.driver.find_element_by_xpath("//app-acknowledge-modal-form[@class='ng-star-inserted']/div[3]/button[@class='button']/span[contains(text(),'OK')]").click()
+            logger.info("Log out and check new password on PA")
+            self.driver.find_element_by_xpath("//div[@class='menu']/p[@class='menuText']/a[contains(text(),'Logout')]").click()
+            self.driver.find_element_by_xpath("//div[contains(text(),'Username:')]//following-sibling::*").send_keys(pauser + "@dsn.mil")
+            self.driver.find_element_by_xpath("//div[contains(text(),'Password:')]//following-sibling::*").send_keys(oldpass)
+            self.driver.find_element_by_xpath("//input[@type='submit' and @name='login']").click()
+            alarm = self.driver.find_element_by_xpath("*//div[@class='login-content']/div[@class='error-message']").text
+            logger.info("Get alarm on page after login PA page:" + alarm)
+            self.assertTrue("" in alarm, "Verify login PA failure: " + alarm)
+            self.driver.find_element_by_xpath("//input[@type='button' and @name='loginConfirm']").click()
+        except (NoSuchElementException, TimeoutException, WebDriverException) as error:
+            logger.error(('Verify user PA information  failure %s') % (error))
+            raise
+
     @keyword("Search user on PROV")
     def searchuser(self, username:str):
         logger.info("Searching User")
@@ -192,6 +293,213 @@ class asweb(unittest.TestCase):
         except (NoSuchElementException, TimeoutException, WebDriverException) as error:
             logger.error(('Verify to search user on PROV failure %s') % (error))
             raise
+
+    @keyword('Assign Assistant Console')
+    def assign_assistant_console(self, username: str):
+        logger.info('Assign Assistant Console')
+        try:
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
+            logger.info("Select domain to User")
+            domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
+            domainhover.perform()
+            self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']//option[@value='dsn.mil']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']//option[@value='userName']").click()
+            self.driver.find_element_by_xpath(
+                "//input[@type='text'and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchForTextValue']").send_keys(
+                username)
+            self.driver.find_element_by_xpath(
+                "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id13']").click()
+            time.sleep(3)
+            self.driver.find_element_by_xpath("//a[contains(text()," + username + ")]").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class ='rich-tab-bottom-line ']//form[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_6:_form']//td[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_15_cell']").click()
+            if self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:6:j_id_jsp_558791977_16pc10']").is_selected():
+                pass
+            else:
+                self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:6:j_id_jsp_558791977_16pc10']").click()
+                self.driver.find_element_by_xpath(
+                    "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_25pc10']").click()
+                logger.info("Add Assistant Console successfully")
+        except (NoSuchElementException, TimeoutException, WebDriverException) as error:
+            logger.error(('Verify arlam when assign Assistant Console %s') % (error))
+
+    @keyword('Unassign Assistant Console')
+    def unassign_assistant_console(self, username: str):
+        logger.info('Assign Assistant Console')
+        try:
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
+            logger.info("Select domain to User")
+            domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
+            domainhover.perform()
+            self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']//option[@value='dsn.mil']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']//option[@value='userName']").click()
+            self.driver.find_element_by_xpath(
+                "//input[@type='text'and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchForTextValue']").send_keys(
+                username)
+            self.driver.find_element_by_xpath(
+                "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id13']").click()
+            time.sleep(3)
+            self.driver.find_element_by_xpath(
+                "/html/body/div[2]/div/div[2]/div/div/div[3]/div/div/table/tbody/tr[2]/td[2]/div/div/table/tbody/tr[2]/td[1]/table/tbody/tr/td/form/div/table/tbody/tr/td[2]/a").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class ='rich-tab-bottom-line ']//form[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_6:_form']//td[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_15_cell']").click()
+            if self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:6:j_id_jsp_558791977_16pc10']").is_selected():
+                self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:6:j_id_jsp_558791977_16pc10']").click()
+                self.driver.find_element_by_xpath(
+                    "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_25pc10']").click()
+            else:
+                pass
+                logger.info("Unassign Assistant Console successfully")
+        except (NoSuchElementException, TimeoutException, WebDriverException) as error:
+            logger.error(('Verify arlam when unassign Assistant Console %s') % (error))
+
+    @keyword('Check Assistant Console on PA')
+    def check_assistant_console_on_pa(self):
+        try:
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Boss Display')]").is_displayed()
+        except NoSuchElementException:
+            raise AssertionError("Assistant Console doesn't show on PA")
+
+    @keyword('Check Unassign Assistant Console on PA')
+    def check_unassistant_console_on_pa(self):
+        try:
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Boss Display')]").is_displayed()
+            raise AssertionError("Assistant Console still display when unassigned")
+        except NoSuchElementException:
+            logger.info("Check unassign Assistant Console on PA successfully")
+
+    @keyword('Check Assistant Support on PA')
+    def check_assistant_support_on_pa(self):
+        try:
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Primary Assistant')]").is_displayed()
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Alternate Assistant')]").is_displayed()
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Assistant Route')]").is_displayed()
+        except NoSuchElementException:
+            raise AssertionError("Assistant Support doesn't show on PA")
+
+    @keyword('Check Unassign Assistant Support on PA')
+    def check_unassistant_support_on_pa(self):
+        try:
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Primary Assistant')]").is_displayed()
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Alternate Assistant')]").is_displayed()
+            self.driver.find_element_by_xpath(
+                "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Assistant Route')]").is_displayed()
+            raise AssertionError("Assistant Support still display when unassigned")
+        except NoSuchElementException:
+            logger.info("Check unassign Assistant Support on PA successfully")
+
+    @keyword('Assign Assistant Support')
+    def assign_assistant_support(self, username: str):
+        logger.info('Assign Assistant Support')
+        try:
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
+            logger.info("Select domain to User")
+            domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
+            domainhover.perform()
+            self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']//option[@value='dsn.mil']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']//option[@value='userName']").click()
+            self.driver.find_element_by_xpath(
+                "//input[@type='text'and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchForTextValue']").send_keys(
+                username)
+            self.driver.find_element_by_xpath(
+                "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id13']").click()
+            time.sleep(3)
+            self.driver.find_element_by_xpath("//a[contains(text()," + username + ")]").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class ='rich-tab-bottom-line ']//form[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_6:_form']//td[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_15_cell']").click()
+            if self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:7:j_id_jsp_558791977_16pc10']").is_selected():
+                pass
+            else:
+                self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:7:j_id_jsp_558791977_16pc10']").click()
+                self.driver.find_element_by_xpath(
+                    "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_25pc10']").click()
+                logger.info("Assign Assistant Support successfully")
+        except (NoSuchElementException, TimeoutException, WebDriverException) as error:
+            logger.error(('Verify arlam when assign Assistant Support %s') % (error))
+
+    @keyword('Unassign Assistant Support')
+    def unassign_assistant_support(self, username: str):
+        logger.info('Assign Assistant Support')
+        try:
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
+            logger.info("Select domain to User")
+            domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
+            domainhover.perform()
+            self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']//option[@value='dsn.mil']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']//option[@value='userName']").click()
+            self.driver.find_element_by_xpath(
+                "//input[@type='text'and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchForTextValue']").send_keys(
+                username)
+            self.driver.find_element_by_xpath(
+                "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id13']").click()
+            time.sleep(3)
+            self.driver.find_element_by_xpath("//a[contains(text()," + username + ")]").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class ='rich-tab-bottom-line ']//form[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_6:_form']//td[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:j_id_jsp_183778380_15_cell']").click()
+            if self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:7:j_id_jsp_558791977_16pc10']").is_selected():
+                self.driver.find_element_by_xpath(
+                    "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:7:j_id_jsp_558791977_16pc10']").click()
+                self.driver.find_element_by_xpath(
+                    "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_25pc10']").click()
+            else:
+                pass
+                logger.info("Unassign Assistant Support successfully")
+        except (NoSuchElementException, TimeoutException, WebDriverException) as error:
+            logger.error(('Verify arlam when unassign Assistant Support %s') % (error))
 
     @keyword("Clean Up Web")
     def cleanup_web(self):

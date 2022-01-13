@@ -1,12 +1,26 @@
-Desciption
-1. Search user on PROV with symbol, space, ...
-2. Delete user
+Description
+
+OBJECTIVE:
+Verified that PROV can add new user and login PA successfully
+
+SETUP
+SP15.5.1
+
+PROCEDURE:
+1. Check PROV search 1 if Admin search username with number only
+2. Check PROV search 2 if Admin search username with domain only
+3. Check PROV search 3 if Admin search username with symbol only
+4. Check PROV search 4 if Admin search username both name and domain
+5. Check PROV search 5 if Admin search blank field
+6. Delete user
+
+EXPECTED:
+PROV can search and display alarm correctly. Admin can delete user
 
 *** Settings ***
 Documentation     Admin search User on PROV and delete user
 Library     ../lib/asweb.py    WITH NAME   ASweb
 Variables   ../Setup/dataconfig.py
-
 Test Teardown   Run Keyword If Test Failed    Clean Up
 
 *** Variables ***

@@ -1,12 +1,23 @@
-Desciption
+Description
+
+OBJECTIVE:
+Verified that PROV can add new user and login PA successfully
+
+SETUP
+SP15.5.1
+
+PROCEDURE:
 1. Add new user
 2. Login new user to PA
+
+EXPECTED:
+1. PROV can add user
+2. User can login PA
 
 *** Settings ***
 Documentation     Admin add new User on PROV and check user infor on PA
 Library     ../lib/asweb.py    WITH NAME   ASweb
 Variables   ../Setup/dataconfig.py
-
 Test Teardown   Run Keyword If Test Failed    Clean Up Web
 
 *** Variables ***

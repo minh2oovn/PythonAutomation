@@ -219,6 +219,35 @@ class asweb(unittest.TestCase):
             logger.error(('Verify user PA information  failure %s') % (error))
             raise
 
+    @keyword('Search user menu')
+    def search_user_menu(self, username: str):
+        logger.info('Assign Assistant Console')
+        try:
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
+            time.sleep(1)
+            self.driver.find_element_by_xpath(
+                "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
+            logger.info("Select user to assign Asisstant Console ")
+            domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
+            domainhover.perform()
+            self.driver.find_element_by_xpath(
+                "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']//option[@value='dsn.mil']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']").click()
+            self.driver.find_element_by_xpath(
+                "//select[@id='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchCriteria']//option[@value='userName']").click()
+            self.driver.find_element_by_xpath(
+                "//input[@type='text'and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:searchForTextValue']").send_keys(
+                username)
+            self.driver.find_element_by_xpath(
+                "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id13']").click()
+            time.sleep(3)
+            self.driver.find_element_by_xpath("//a[contains(text()," + username + ")]").click()
+        except (NoSuchElementException, TimeoutException, WebDriverException) as error:
+            logger.error(('Verify arlam when searching user%s') % (error))
+
     @keyword("Search user on PROV")
     def searchuser(self, username:str):
         logger.info("Searching User")
@@ -303,7 +332,7 @@ class asweb(unittest.TestCase):
             time.sleep(1)
             self.driver.find_element_by_xpath(
                 "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
-            logger.info("Select domain to User")
+            logger.info("Select user to assign Asisstant Console ")
             domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
                 "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
             domainhover.perform()
@@ -331,20 +360,20 @@ class asweb(unittest.TestCase):
                     "//td[@class='rich-table-cell ']//input[@type='checkbox' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_7pc10:6:j_id_jsp_558791977_16pc10']").click()
                 self.driver.find_element_by_xpath(
                     "//input[@type='submit' and @name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_183778380_0:Services:j_id_jsp_558791977_1pc10:j_id_jsp_558791977_25pc10']").click()
-                logger.info("Add Assistant Console successfully")
+                logger.info("Assign Assistant Console successfully")
         except (NoSuchElementException, TimeoutException, WebDriverException) as error:
             logger.error(('Verify arlam when assign Assistant Console %s') % (error))
 
     @keyword('Unassign Assistant Console')
     def unassign_assistant_console(self, username: str):
-        logger.info('Assign Assistant Console')
+        logger.info('Unassign Assistant Console')
         try:
             self.driver.find_element_by_xpath(
                 "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
             time.sleep(1)
             self.driver.find_element_by_xpath(
                 "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
-            logger.info("Select domain to User")
+            logger.info("Select user to unassign Assistant Console")
             domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
                 "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
             domainhover.perform()
@@ -377,25 +406,31 @@ class asweb(unittest.TestCase):
         except (NoSuchElementException, TimeoutException, WebDriverException) as error:
             logger.error(('Verify arlam when unassign Assistant Console %s') % (error))
 
-    @keyword('Check Assistant Console on PA')
-    def check_assistant_console_on_pa(self):
+    @keyword('Verify Assistant Console on PA')
+    def verify_assistant_console_on_pa(self):
+        logger.info("Validating assign Assistant Console on PA...")
         try:
             self.driver.find_element_by_xpath(
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Boss Display')]").is_displayed()
+            logger.info("Verify assign Assistant Console on PA successfully")
         except NoSuchElementException:
-            raise AssertionError("Assistant Console doesn't show on PA")
+            logger.error("Error!Assistant Console doesn't show on PA")
+            raise AssertionError("Error!Assistant Console doesn't show on PA")
 
-    @keyword('Check Unassign Assistant Console on PA')
-    def check_unassistant_console_on_pa(self):
+    @keyword('Verify Unassign Assistant Console on PA')
+    def verify_unassistant_console_on_pa(self):
+        logger.info("Validating unassign Assistant Console on PA...")
         try:
             self.driver.find_element_by_xpath(
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Boss Display')]").is_displayed()
-            raise AssertionError("Assistant Console still display when unassigned")
+            logger.error("Error!Assistant Console still display when unassigned")
+            raise AssertionError("Error!Assistant Console still display when unassigned")
         except NoSuchElementException:
-            logger.info("Check unassign Assistant Console on PA successfully")
+            logger.info("Verify unassign Assistant Console on PA successfully")
 
-    @keyword('Check Assistant Support on PA')
-    def check_assistant_support_on_pa(self):
+    @keyword('Verify Assistant Support on PA')
+    def verify_assistant_support_on_pa(self):
+        logger.info("Validating assign Assistant Support on PA...")
         try:
             self.driver.find_element_by_xpath(
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Primary Assistant')]").is_displayed()
@@ -404,10 +439,12 @@ class asweb(unittest.TestCase):
             self.driver.find_element_by_xpath(
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Assistant Route')]").is_displayed()
         except NoSuchElementException:
-            raise AssertionError("Assistant Support doesn't show on PA")
+            logger.error("Error!Assistant Support doesn't show on PA")
+            raise AssertionError("Error!Assistant Support doesn't show on PA")
 
-    @keyword('Check Unassign Assistant Support on PA')
-    def check_unassistant_support_on_pa(self):
+    @keyword('Verify Unassign Assistant Support on PA')
+    def verify_unassistant_support_on_pa(self):
+        logger.info("Validating unassign Assistant Support on PA...")
         try:
             self.driver.find_element_by_xpath(
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Primary Assistant')]").is_displayed()
@@ -415,7 +452,8 @@ class asweb(unittest.TestCase):
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Alternate Assistant')]").is_displayed()
             self.driver.find_element_by_xpath(
                 "//label[@class='labelStyle-bold ng-star-inserted' and contains(text(), 'Assistant Route')]").is_displayed()
-            raise AssertionError("Assistant Support still display when unassigned")
+            logger.error("Error!Assistant Support still display when unassigned")
+            raise AssertionError("Error!Assistant Support still display when unassigned")
         except NoSuchElementException:
             logger.info("Check unassign Assistant Support on PA successfully")
 
@@ -428,7 +466,7 @@ class asweb(unittest.TestCase):
             time.sleep(1)
             self.driver.find_element_by_xpath(
                 "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
-            logger.info("Select domain to User")
+            logger.info("Select user to assign Assistant Support")
             domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
                 "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
             domainhover.perform()
@@ -462,14 +500,14 @@ class asweb(unittest.TestCase):
 
     @keyword('Unassign Assistant Support')
     def unassign_assistant_support(self, username: str):
-        logger.info('Assign Assistant Support')
+        logger.info('Unassign Assistant Support')
         try:
             self.driver.find_element_by_xpath(
                 "//td[@class='rich-toolbar-item ']//form[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8'and@name='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8']").click()
             time.sleep(1)
             self.driver.find_element_by_xpath(
                 "//td[@class='rich-toolbar-item ']//span[@id='_js_MainMenuPortlet__MainMenuPortlet_:j_id_jsp_1273130114_0:j_id_jsp_1273130114_8:j_id0:anchor'and contains(text(),'Search')]").click()
-            logger.info("Select domain to User")
+            logger.info("Select user to unassign Assistant Support")
             domainhover = ActionChains(self.driver).move_to_element(self.driver.find_element_by_xpath(
                 "//select[@name='_js_MainMenuPortlet__dp_2__UserPortlet_:j_id_jsp_374979482_0:searchView:j_id_jsp_22168579_0pc2:j_id_jsp_22168579_5pc2']"))
             domainhover.perform()
